@@ -4,8 +4,8 @@ Servo myservo1;  // create servo object to control a servo
 Servo myservo2;  // create servo object to control a servo 
 int inputPort1 = 2;
 int inputPort2 = 3;
-int servo1 = 11;
-int servo2 = 13;
+int servo1 = 9;
+int servo2 = 10;
 
 int currentAngle1 = 180;
 int targetAngle1 = 180;
@@ -29,18 +29,20 @@ void loop()
   //val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023) 
   //val = map(val, 0, 1023, 0, 179);     // scale it to use it with the servo (value between 0 and 180) 
                  // sets the servo position according to the scaled value 
-  
+ // Serial.println(currentAngle1);
   if(digitalRead(inputPort1))
   {
     currentAngle1 = 180;
+    Serial.println(currentAngle1);
   }
   else
   {
     currentAngle1 = 0;
+     Serial.println(currentAngle1);
   }
   
   myservo1.write(currentAngle1); 
-   myservo2.write(currentAngle1);
+  myservo2.write(currentAngle1);
   
   /*
   if(digitalRead(inputPort2))
