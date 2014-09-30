@@ -5,13 +5,13 @@ Servo myservo2;  // create servo object to control a servo
 int inputPort1 = 2;
 int inputPort2 = 3;
 int servo1 = 9;
-int servo2 = 10;
+int servo2 = 11;
 
-int currentAngle1 = 180;
-int targetAngle1 = 180;
+int currentAngle1 = 90;
+int targetAngle1 = 90;
 
-int currentAngle2 = 180;
-int targetAngle2 = 180;
+int currentAngle2 = 90;
+int targetAngle2 = 90;
 
 
 void setup() 
@@ -32,52 +32,18 @@ void loop()
  // Serial.println(currentAngle1);
   if(digitalRead(inputPort1))
   {
-    currentAngle1 = 180;
-    Serial.println(currentAngle1);
+    currentAngle1 = 45;
+    currentAngle2 = 115;
+   // Serial.println(currentAngle1);
   }
   else
   {
-    currentAngle1 = 0;
-     Serial.println(currentAngle1);
+    currentAngle1 = 115;
+     currentAngle2 = 45;
+     //Serial.println(currentAngle1);
   }
   
   myservo1.write(currentAngle1); 
-  myservo2.write(currentAngle1);
+  myservo2.write(currentAngle2);
   
-  /*
-  if(digitalRead(inputPort2))
-  {
-    currentAngle2 = 180;
-  }
-  else
-  {
-    currentAngle2 = 0;
-  }*/
-  
-
-  
-  //Serial.println(currentAngle);
- /* 
-  if(currentAngle<targetAngle)currentAngle++;
-  else if(currentAngle>targetAngle)
-  {
-    currentAngle--;
-  }
-  else if(currentAngle == targetAngle)
-  {
-     if(targetAngle==0)targetAngle = 180;
-     else if(target  Angle==180)targetAngle = 0;
-  }
-  */
-  
-  
-  
-  
-    
-   
-  
-  
- // delay(5);                           // waits for the servo to get there 
-
- // SoftwareServo::refresh();
 } 
