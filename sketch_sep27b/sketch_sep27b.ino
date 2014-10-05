@@ -32,14 +32,14 @@ void loop()
  // Serial.println(currentAngle1);
   if(digitalRead(inputPort1))
   {
-    currentAngle1 = 45;
+    currentAngle1 = 65;
     currentAngle2 = 115;
    // Serial.println(currentAngle1);
   }
   else
   {
     currentAngle1 = 115;
-     currentAngle2 = 45;
+     currentAngle2 = 65;
      //Serial.println(currentAngle1);
   }
   
